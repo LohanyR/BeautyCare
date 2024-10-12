@@ -1,0 +1,173 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+@media (min-width: 400px ) {
+    body {
+       font-size: 10px
+    }
+}
+
+ /*breakpoint*/
+@media (min-width: 600px ) {
+  body {
+     font-size: 13px;
+    }
+}
+
+  /*breakpoint*/
+@media (min-width: 1200px ) {
+    body {
+       font-size: 16px;
+    }
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.menu {
+    background-color:#45564b;
+    color: white;
+    text-align: center;
+    font-family: 'GFS Didot', serif;
+    font-size: 20px;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.menu ul li {
+    margin: 10px 40px; 
+    display: inline-block; 
+}
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.main {
+    flex: 1;
+}
+    
+.header-principal {
+    background-image: url('imagens/Principal.jpeg');
+    background-size: cover; /* Faz a imagem cobrir toda a área */
+    background-position: center; /* Centraliza a imagem */
+    height: 480px; /* Ajuste a altura conforme necessário */
+    display: flex; /* Para centralizar o conteúdo */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; 
+}
+
+.header-sobre,
+.header-index,
+.header-horario{
+    height: 195px;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    display: flex; /* Para centralizar o conteúdo */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.content {
+    padding: 20px;
+    text-align: justify;
+    background-color: #45564b;
+    color: #ffffff;
+    font-family: 'Courier New', Consolas, 'Fira Code', monospace;
+}
+
+@media (min-width: 400px ) {
+    content{
+        padding-bottom: 100px;
+    }
+}
+
+
+
+.content h1{
+    font-family: 'GFS Didot', serif;
+    font-size: 25px;
+}
+
+.form{
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    font-family: 'montserrat', serif;
+}
+    
+label {
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: 30%;
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 100px;
+}
+
+button {
+    width: 20%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="reset"] {
+    background-color: #f44336;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #799e75;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+}
+
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #292929;
+    color: #ffffff;
+}
