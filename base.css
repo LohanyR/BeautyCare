@@ -1,26 +1,6 @@
-body {
+body { 
     margin: 0;
     padding: 0;
-}
-
-@media (min-width: 400px ) {
-    body {
-       font-size: 10px
-    }
-}
-
- /*breakpoint*/
-@media (min-width: 600px ) {
-  body {
-     font-size: 13px;
-    }
-}
-
-  /*breakpoint*/
-@media (min-width: 1200px ) {
-    body {
-       font-size: 16px;
-    }
 }
 
 .wrapper {
@@ -30,11 +10,27 @@ body {
 }
 
 .menu {
-    background-color:#45564b;
+    background-color: #45564b;
     color: white;
     text-align: center;
     font-family: 'GFS Didot', serif;
-    font-size: 20px;
+    position: fixed;
+    width: 100vw;
+    padding: 10px 0;
+    top: 0; 
+    z-index: 1000; 
+}
+
+@media (min-width: 600px) {
+    .menu {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .menu {
+        font-size: 18px;
+    }
 }
 
 .menu ul {
@@ -47,61 +43,125 @@ body {
 }
 
 .menu ul li {
-    margin: 10px 40px; 
+    margin: 0 20px; 
     display: inline-block; 
 }
+
 .menu ul li a {
     color: white;
     text-decoration: none;
+    padding: 0 10px;
+}
+
+@media (max-width: 545px) {
+    .menu ul li {
+        margin: 5px 10px;
+        font-size: 14px; 
+    }
+}
+
+@media (max-width: 425px) {
+    .menu ul li {
+        font-size: 12px; 
+    }
+}
+
+@media (max-width: 400px) {
+    .menu ul li {
+        font-size: 10px; 
+    }
 }
 
 .main {
     flex: 1;
 }
     
-.header-principal {
-    background-image: url('imagens/Principal.jpeg');
-    background-size: cover; /* Faz a imagem cobrir toda a área */
-    background-position: center; /* Centraliza a imagem */
-    height: 480px; /* Ajuste a altura conforme necessário */
-    display: flex; /* Para centralizar o conteúdo */
-    align-items: center; /* Centraliza verticalmente */
-    justify-content: center; 
+.header-index {
+    display: flex;
+    flex-direction: column;
+}
+
+.image-container {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    display: block;
+}
+
+.principal {
+    height: 610px;
+    width: 100%;
+    color: #ffffff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;
+}
+
+.principal h1{
+    font-family: 'GFS Didot', serif;
+    margin-bottom: 2px;
+}
+
+.principal h2{
+    font-family: 'Courier New', Consolas, 'Fira Code', monospace;
+    margin-top: 2px;
+}
+
+.secundaria {
+    height: 195px;
 }
 
 .header-sobre,
-.header-index,
 .header-horario{
     height: 195px;
     color: white;
     background-size: cover;
     background-position: center;
-    display: flex; /* Para centralizar o conteúdo */
-    align-items: center; /* Centraliza verticalmente */
+    display: flex; 
+    align-items: center;
 }
 
 .content {
-    padding: 20px;
+    padding: 40px;
     text-align: justify;
     background-color: #45564b;
     color: #ffffff;
     font-family: 'Courier New', Consolas, 'Fira Code', monospace;
 }
 
-@media (min-width: 400px ) {
-    content{
-        padding-bottom: 100px;
+@media (max-width: 600px ) {
+    .content p {
+        font-size: 14px;
     }
 }
-
-
 
 .content h1{
     font-family: 'GFS Didot', serif;
     font-size: 25px;
 }
 
-.form{
+@media (max-width: 400px ) {
+    .content h1 {
+        font-size: 20px;
+    }
+}
+
+iframe {
+    width: 600px;
+    height: 450px;
+    border: 0;
+}
+
+@media (max-width: 700px ) {
+    iframe {
+        width: 300px;
+        height: 225px;
+    }
+}
+
+.form {
     background-color: white;
     padding: 20px;
     border-radius: 10px;
@@ -110,7 +170,7 @@ body {
     width: 100%;
     font-family: 'montserrat', serif;
 }
-    
+
 label {
     font-weight: bold;
     margin-top: 10px;
@@ -118,7 +178,7 @@ label {
 }
 
 input[type="text"], input[type="email"], textarea {
-    width: 30%;
+    width: 100%;
     padding: 10px;
     margin: 5px 0 15px 0;
     border: 1px solid #ccc;
@@ -131,7 +191,7 @@ textarea {
 }
 
 button {
-    width: 20%;
+    width: 100%;
     padding: 10px;
     background-color: #4CAF50;
     color: white;
@@ -148,12 +208,12 @@ button:hover {
     opacity: 0.9;
 }
 
-
 table {
-    width: 100%;
+    width: 100%; 
+    height: auto; 
     border-collapse: collapse;
-    margin: 20px 0;
-    background-color: #799e75;
+    margin: 0;
+    background-color: #5e7c5b;
 }
 
 table, th, td {
@@ -161,8 +221,19 @@ table, th, td {
 }
 
 th, td {
-    padding: 15px;
+    padding: 10px;
     text-align: center;
+    word-wrap: break-word; 
+}
+
+th {
+    background-color: #292929;
+}
+
+@media (max-width: 600px) {
+    table {
+        font-size: 12px; 
+    }
 }
 
 .footer {
@@ -170,4 +241,5 @@ th, td {
     padding: 10px;
     background-color: #292929;
     color: #ffffff;
+    font-size: 12px;
 }
