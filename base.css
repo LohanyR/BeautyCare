@@ -82,11 +82,13 @@ body {
 }
 
 .image-container {
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    display: block;
+    background-size: cover; 
+    background-position: center; 
+    width: 100%; 
+    display: block; 
+    background-attachment: fixed; 
 }
+
 
 .principal {
     height: 610px;
@@ -242,4 +244,14 @@ th {
     background-color: #292929;
     color: #ffffff;
     font-size: 12px;
+}
+
+.link-sublinhado {
+    color: #3498db; 
+    text-decoration: underline; 
+}
+
+.link-sublinhado:hover {
+    text-decoration: none; 
+    color: #1abc9c; 
 }
